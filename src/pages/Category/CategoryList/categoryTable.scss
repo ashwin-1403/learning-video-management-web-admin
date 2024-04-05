@@ -1,0 +1,155 @@
+@import "../../../variables.scss";
+@mixin customStyles {
+  color: $primary-color;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Poppins";
+}
+@mixin customInput {
+  width: 100%;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  padding: 7px 10px;
+  padding-right: 35px;
+  font-family: "Poppins";
+  font-size: 16px;
+  background-color: #fff;
+}
+.geoCodeTH {
+  padding: 0 !important;
+  padding-top: 5px !important;
+  .subGeoCode {
+    display: flex !important;
+    justify-content: space-evenly;
+    border-top: 2px solid white;
+    margin-top: 3px;
+    div {
+      width: 100%;
+      padding: 5px;
+    }
+    div:first-child {
+      border-right: 2px solid #fff;
+    }
+  }
+}
+.tableStationWidth {
+  width: -webkit-fill-available;
+  .addEmployeeBtn {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+.qrCode {
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+  canvas {
+    display: none;
+  }
+}
+.qrcodeDownloadIcon {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.searchInputSec {
+  width: 470px;
+  position: relative;
+  margin-right: 20px;
+  input {
+    @include customInput;
+    &:focus-visible {
+      outline: 0 !important;
+    }
+  }
+  img {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchInputSec {
+    width: 100%;
+  }
+}
+
+.categoryButton {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+}
+
+.subCategoryAction {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.subCategoryButton {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  @include customStyles;
+}
+.detailsSubCategory {
+  @include customStyles;
+}
+.backButton {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.subCategorySearch {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 2.5rem;
+
+  .subCategorySearchInput {
+    width: 250px;
+    position: relative;
+    margin-right: 20px;
+
+    input {
+      @include customInput;
+      &:focus-visible {
+        outline: 0 !important;
+      }
+    }
+    img {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+  }
+}
+.employeeSection {
+  .selectCategory {
+    @include customInput;
+    width: 250px;
+    position: relative;
+    margin-right: 20px;
+    color: #4d4d4d;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    background-image: url("../../../assets/img/Vector.png");
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}

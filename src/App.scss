@@ -1,0 +1,107 @@
+@mixin customInput {
+  width: 100%;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  padding: 7px 10px;
+  padding-right: 35px;
+  font-family: "Poppins";
+  font-size: 16px;
+  background-color: #fff;
+}
+input:focus {
+  box-shadow: none !important;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  height: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .App {
+    .home-section {
+      left: 230px;
+      width: calc(100% - 230px);
+      .headerContentSec .home-content .bx-menu {
+        width: 30px;
+      }
+      .employeeSection .employeeHeader {
+        .employeeheading h2 {
+          font-size: 28px;
+        }
+        .addEmployeeBtn button {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .sidebar {
+      width: 230px;
+      .nav-links li a .link_name {
+        font-size: 19px !important;
+      }
+      .logo-details .logo_name {
+        font-size: 19px;
+      }
+    }
+    .sidebar.close img.mainLogo {
+      width: 60%;
+      left: unset;
+      object-fit: contain;
+    }
+  }
+}
+.aspectHeight {
+  height: 100vh;
+}
+.employeeheading {
+  h2 {
+    color: #00c2ff;
+    font-size: 24px;
+    font-family: Poppins;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.custom-button {
+  border: none; /* Remove border */
+}
+@media (max-width: 768px) {
+  .commonBG .employeeSection .employeeHeader {
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .employeeheading {
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  .student-search-mobile {
+    margin-bottom: 10px;
+  }
+}

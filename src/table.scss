@@ -1,0 +1,204 @@
+@import "./variables.scss";
+.employeeTableSection {
+  margin-top: 20px;
+  .table-responsive {
+    box-shadow: 0px 0px 25px 0px #00000026;
+  }
+  table {
+    width: 100%;
+    tr {
+      text-align: center;
+    }
+    .tableHead {
+      tr {
+        background-color: $primary-color;
+        th:first-child {
+          border-left: 0;
+          width: 6%;
+          &:first-child {
+            min-width: 80px;
+          }
+        }
+        th {
+          color: white;
+          min-width: 110px;
+          border: 2px solid #fff;
+          font-size: 14.08px;
+          font-family: Poppins;
+          font-weight: 600;
+          padding: 10px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #edf9ff;
+        }
+        &:nth-child(odd) {
+          background-color: #ffffff;
+        }
+        td {
+          border: 1px solid #65656529;
+          color: black;
+          max-width: 150px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 13px;
+          font-family: Poppins;
+          font-weight: 400;
+          padding: 8px 3px;
+          .form-check {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            input {
+              width: 21px;
+              height: 21px;
+              &:focus {
+                box-shadow: none;
+                border-color: #b0b0b0;
+              }
+              &:active {
+                filter: brightness(100%);
+              }
+            }
+            .form-check-input:checked[type="checkbox"] {
+              background-image: url("./assets/img/checkedIcon.png");
+              background-color: #fff;
+              background-size: 11px;
+              border-color: #b0b0b0;
+            }
+          }
+          .empTableImg {
+            background: transparent;
+            border: none;
+          }
+          .employeImg {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border: 1px solid #61caff;
+            padding: 7px;
+          }
+          button.editButton {
+            border: 0;
+            background-color: $primary-color;
+            color: #fff;
+            font-size: 13px;
+            font-family: Poppins;
+            font-weight: 500;
+            padding: 2px 10px;
+            border-radius: 3px;
+            height: 2rem;
+            width: 7rem;
+            margin: 0.2rem;
+          }
+          .editButtonCategory {
+            color: #00c2ff;
+            font-family: Poppins;
+            padding: 2px 10px;
+            margin: 0.5rem;
+            appearance: none;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            font-size: 15px;
+            font-weight: 500;
+          }
+        }
+        img {
+          width: 50px;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.activeButton {
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: white;
+  color: green;
+}
+.emailSpecific {
+  min-width: 250px !important;
+}
+
+@media (max-width: 768px) {
+  .employeeTableSection {
+    table {
+      .tableHead {
+        tr {
+          th {
+            font-size: 13px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            .employeImg {
+              width: 60px;
+              height: 60px;
+            }
+            button.editButton {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .employeeTableSection {
+    table {
+      .tableHead tr th:last-child {
+        border-right: 0;
+        position: sticky;
+        background-color: $primary-color;
+        right: -0.5px;
+        color: #fff;
+        outline: 3px solid #fff;
+        outline-offset: -1px;
+      }
+      tbody tr td:last-child {
+        background-color: #fff;
+        position: sticky;
+        right: -0.8px;
+        outline: 1px solid #e1e5e6;
+      }
+    }
+  }
+  .attendanceReportSec {
+    table {
+      .tableHead {
+        tr {
+          th:last-child {
+            position: unset;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td:last-child {
+            position: unset !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.employeeTableSection table tbody tr:nth-child(even) td:last-child {
+  background-color: #edf9ff;
+}
+.greenClr {
+  color: green !important;
+}
+.redClr {
+  color: red !important;
+}

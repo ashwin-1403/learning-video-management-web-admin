@@ -1,0 +1,361 @@
+@import "./variables.scss";
+.employeeSection {
+  .headerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .employeeHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+    gap: 30px;
+   
+    .addEmployeeBtn {
+      button {
+        background-color: $primary-color;
+        border-radius: 1px;
+        border: 0;
+        color: #fff;
+        font-size: 14.2px;
+        font-family: Poppins;
+        font-weight: 500;
+        padding: 5px 8px;
+        margin-right: 0;
+        .addEmployeeText {
+          padding-left: 7px;
+        }
+      }
+    }
+  }
+  .employeeSearchSec.payoutHeaderSec {
+    align-items: end;
+    .searchInputSec img {
+      top: 42px;
+    }
+  }
+  .employeeHeaderChange {
+    align-items: flex-end;
+    .dropdown {
+      label {
+        color: #4d4d4d;
+        font-family: Poppins;
+        font-size: 16.202px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 7px;
+      }
+      .selectIcondiv {
+        top: 37px !important;
+      }
+    }
+  }
+
+  .employeeSearchSec {
+    display: flex;
+    .dropdown {
+      width: 170px;
+      position: relative;
+      margin-right: 20px;
+      .selectIcondiv {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+      }
+
+      .selectDropdown {
+        background-color: #fff;
+        border: 1px solid #b3b3b3;
+        width: 100%;
+        border-radius: 3px;
+        padding: 7px 10px;
+        text-align: start;
+        -webkit-appearance: none;
+        color: #4d4d4d;
+        font-weight: 400;
+        font-size: 16px;
+        &:focus-visible {
+          outline: none;
+        }
+        option {
+          max-width: 100%;
+          overflow: hidden;
+          width: 100%;
+        }
+      }
+
+      .selectDropdown:disabled {
+        background-color: #e9ecef;
+      }
+    }
+    .clearAll button {
+      color: white;
+      font-size: 16.2px;
+      font-family: Poppins;
+      font-weight: 700;
+      background-color: #f36f56;
+      border: 0;
+      width: max-content;
+      padding: 8px 15px;
+    }
+    .searchInputSec {
+      width: 279px;
+      position: relative;
+      margin-right: 20px;
+      label {
+        color: #4d4d4d;
+        font-size: 16.2px;
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 7px;
+      }
+      input {
+        width: 100%;
+        border: 1px solid #b3b3b3;
+        font-family: poppins;
+        border-radius: 3px;
+        padding: 7px 10px;
+        padding-right: 35px;
+        &:focus-visible {
+          outline: 0 !important;
+        }
+      }
+      img {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+      }
+    }
+    .deactiveBtnSec {
+      .deactivateBtn {
+        border: 0;
+        border-radius: 3px;
+        background-color: #be2424;
+        color: #fff;
+        font-size: 15px;
+        font-family: Poppins;
+        font-weight: 700;
+        padding: 8px 16px;
+      }
+    }
+  }
+}
+.attendanceEmployeeSection {
+  .employeeSearchSec {
+    align-items: flex-end;
+    gap: 15px;
+    .attendanceLabel {
+      margin-bottom: 7px;
+      color: #4d4d4d;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .dropdown .selectIcondiv {
+      top: 37px;
+    }
+  }
+}
+@media (max-width: 530px) {
+  .sidebar.close ~ .home-section .addEmployeeText {
+    display: block !important;
+    padding-left: 5px;
+    position: relative;
+    top: 1px;
+  }
+  .payoutHeaderSec {
+    .searchInputSec {
+      margin-right: 0 !important;
+    }
+  }
+  .employeeSection {
+    .employeeHeader {
+      .employeeheading {
+        h2 {
+          font-size: 24px !important;
+        }
+      }
+      .addEmployeeBtn {
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 13px !important;
+          .addEmployeeText {
+            display: none !important;
+          }
+        }
+      }
+    }
+    .employeeSearchSec {
+      flex-direction: column;
+      .dropdown {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0 !important;
+      }
+      .searchInputSec {
+        margin-bottom: 15px;
+        width: 100% !important;
+      }
+      .deactiveBtnSec {
+        .deactivateBtn {
+          width: 100% !important;
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .attendanceEmployeeSection {
+    .employeeSearchSec {
+      flex-direction: column;
+      align-items: flex-start;
+      .searchInputSec {
+        margin-right: 0;
+        width: 100%;
+      }
+      .dropdown {
+        width: 100%;
+        margin-top: 10px;
+        margin-right: 0;
+      }
+      .clearAll {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 530px) and (max-width: 768px) {
+  .attendanceEmployeeSection {
+    .employeeSearchSec {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .searchInputSec {
+        margin-right: 0 !important;
+        width: 45% !important;
+      }
+      .dropdown {
+        width: 45%;
+        margin-top: 10px;
+        margin-right: 0;
+      }
+      .clearAll {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .employeeSection {
+    padding: 0 10px;
+    .headerContent{
+      flex-direction: column;
+      gap: 15px;
+    }
+    .employeeHeader {
+      .employeeheading {
+        gap: 10px !important;
+        h2 {
+          font-size: 20px;
+        }
+      }
+      .addEmployeeBtn {
+        button {
+          font-size: 14px;
+          padding: 6px 12px;
+          font-weight: 500;
+          .addEmployeeText {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+    .employeeSearchSec {
+      .dropdown {
+        margin-right: 5px;
+
+        .selectDropdown {
+          font-size: 14px;
+          padding: 7px 5px;
+        }
+      }
+      .employeeHeaderSearch {
+        margin-right: 0 !important;
+      }
+      .searchInputSec {
+        margin-right: 10px;
+        width: 210px;
+        input {
+          font-size: 14px;
+        }
+        img {
+          width: 15px;
+          right: 10px;
+        }
+      }
+      .deactiveBtnSec {
+        .deactivateBtn {
+          font-size: 12px;
+          width: max-content;
+          padding: 10px;
+        }
+      }
+      .clearAll button {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px 5px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .employeeSection {
+    .employeeSearchSec {
+      .dropdown {
+        margin-right: 10px;
+      }
+      .searchInputSec {
+        margin-right: 10px;
+        width: 170px;
+      }
+    }
+  }
+  .attendanceEmployeeSection {
+    .employeeSearchSec {
+      flex-wrap: wrap;
+      .searchInputSec {
+        width: 45%;
+      }
+      .dropdown {
+        width: 45%;
+        margin-top: 15px;
+      }
+      // .clearAll {
+      //   margin: 25px;
+      // }
+      .clearBtn {
+        margin: 0px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .employeeSection .employeeSearchSec .dropdown .selectDropdown {
+    padding-right: 30px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1400px) {
+  .employeeSection .employeeSearchSec {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

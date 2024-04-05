@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+.addVideoContainer {
+  display: flex;
+  flex-direction: column;
+  .videoFromContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    .searchInputSec {
+      width: 100%;
+      margin-right: 0;
+      label {
+        color: #7d7d7d;
+        font-size: 12px;
+        font-family: Outfit;
+        font-weight: 400;
+      }
+      #stateSelect {
+        margin-right: 0;
+      }
+    }
+    #description {
+      width: 100%;
+    }
+  }
+  .description {
+    width: 80%;
+    height: 12rem;
+    border-color: gainsboro;
+  }
+  .uploadVideoButton {
+    background-color: $primary-color;
+    border-radius: 3px;
+    border: 0;
+    color: #fff;
+    font-size: 16.2px;
+    font-family: Poppins;
+    font-weight: 700;
+    padding: 8px 14px;
+    margin-right: 0;
+  }
+}

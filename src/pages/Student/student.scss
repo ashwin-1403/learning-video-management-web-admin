@@ -1,0 +1,85 @@
+@import "../../variables.scss";
+.modelViewSession {
+  font-family: Poppins;
+  .modelButton {
+    border: 0;
+    background-color: $primary-color;
+    color: #fff;
+    font-size: 14px;
+    font-family: Poppins;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 3px;
+  }
+  .modelButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .modelHeading {
+    color: $primary-color;
+    font-size: 18.33px;
+    font-family: Poppins;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.addStudentHeading {
+  color: $primary-color;
+  font-size: 20.33px;
+  font-family: Poppins;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.customNavLink {
+  border: 0;
+  text-decoration: none;
+}
+
+.rct-collapse {
+  position: relative;
+  display: inline-block;
+  /* visibility: hidden; */
+  padding: 0px 23px;
+  background-color: transparent;
+  border: unset;
+}
+
+.rct-collapse-btn::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  z-index: 11;
+  display: block;
+  width: 14px;
+  height: 13px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  /* bottom: 0; */
+  top: -12px;
+  transform: rotate(133deg);
+}
+
+.rct-node-expanded .rct-collapse-btn::before {
+  top: -12px;
+  transform: rotate(225deg);
+}
+
+.react-checkbox-tree ol {
+  list-style-type: none;
+}
+
+li.rct-node.rct-node-parent.rct-node-collapsed {
+  margin-top: 10px;
+}
+span.rct-title {
+  padding-left: 8px;
+  font-family: Poppins;
+  color: #7d7d7d;
+}
+.profileInfoSec {
+  select {
+    margin-right: 0;
+  }
+}

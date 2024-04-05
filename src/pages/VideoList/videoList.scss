@@ -1,0 +1,51 @@
+@import "../../variables.scss";
+.videoListContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .videoHeading {
+    color: $primary-color;
+    font-size: 33.33px;
+    font-family: Poppins;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+.videoCardListContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.videoDetailsCard {
+  width: 100%;
+  height: 12rem;
+}
+.videoCategory {
+  width: 50%;
+}
+.clearButton {
+  background-color: #00c2ff;
+  border-radius: 3px;
+  border: 0;
+  color: #fff;
+  font-size: 16.2px;
+  font-family: Poppins;
+  font-weight: 500;
+  padding: 8px 9px;
+  margin-right: 0;
+}
+@media(max-width:768px){
+  .videoCategory{
+    width: 100%;
+    flex-direction: column;
+    .videoCategoryContainer{
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}

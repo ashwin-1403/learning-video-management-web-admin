@@ -1,0 +1,380 @@
+@import "../variables.scss";
+
+.logInPage {
+  background-image: url(../assets/img/LoginBG.png);
+  padding: 70px 0;
+  background-position: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  .deliveryImgSec {
+    margin-top: 67px;
+  }
+
+  .enterpriseSec .enterpriseHeading {
+    h1 {
+      color: black;
+      font-size: 30px;
+      font-family: "Viga", sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  .loginFormSection {
+    .loginFormSec {
+      width: 510px;
+      margin: auto;
+      padding: 60px 50px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      background-color: #fff;
+
+      h2.welcomeHeading {
+        font-size: 30px;
+        font-weight: 700;
+        font-family: "Outfit", sans-serif;
+        color: #00c2ff;
+        margin-bottom: 43px;
+      }
+
+      h1.loginHeading {
+        color: #565656;
+        font-size: 40px;
+        font-family: Outfit;
+        margin-bottom: 43px;
+        font-weight: 200;
+      }
+
+      .inputFeilds {
+        label.form-label {
+          color: #7d7d7d;
+          font-size: 12px;
+          font-family: Outfit;
+          font-weight: 400;
+          margin-bottom: 10px;
+        }
+        .form-control {
+          border: 0.25px #7d7d7d solid;
+          border-radius: 0;
+          padding: 10px 20px;
+        }
+        input:focus {
+          box-shadow: none !important;
+          border-color: #dfdfdf;
+        }
+        .forgotSec {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .rememberMe {
+            margin-top: 7px;
+          }
+          p {
+            margin: 0;
+            color: #7d7d7d;
+            font-size: 10px;
+            font-family: Outfit;
+            font-weight: 400;
+          }
+          input#exampleCheck1 {
+            border-radius: 0;
+          }
+          label.form-check-label {
+            color: #7d7d7d;
+            font-size: 10px;
+            font-family: Outfit;
+            font-weight: 400;
+          }
+        }
+        .loginBtnSec {
+          margin-top: 49px;
+          .loginBtn {
+            width: 100%;
+            background-color: #00c2ff;
+            border: 0;
+            padding: 10px;
+            color: #fff;
+            font-size: 16px;
+            font-family: Outfit;
+            font-weight: 700;
+          }
+        }
+        .backToLoginBtn {
+          text-align: center;
+          margin-top: 100px;
+          h6 {
+            color: #111111;
+            font-size: 16px;
+            font-family: Inter;
+            font-weight: 700;
+          }
+        }
+        // OTP css
+        .numberFields {
+          display: flex;
+          justify-content: center;
+          input[type="text"] {
+            width: 60px;
+            margin: 0 8px;
+            height: 80px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            border: 0.5px solid #bdbdbd;
+            font-size: 30px;
+            padding: 10px 15px;
+            &:focus-visible {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.otpErrorMsgs {
+  display: flex;
+  color: red;
+  justify-content: center;
+}
+.LoginMsgs {
+  color: red;
+}
+//common class for all
+.textDecorationNone {
+  text-decoration: none !important;
+}
+
+.otpPage {
+  .loginFormSection .loginFormSec {
+    padding-bottom: 117px;
+  }
+  .resendOtp {
+    margin-top: 49px;
+    background: transparent;
+    border: none;
+    color: #565656;
+    font-weight: 600;
+    font-family: poppins;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+.forgotPage .loginFormSection .loginFormSec {
+  h1.loginHeading {
+    margin-bottom: 39px;
+    text-align: center;
+  }
+  p {
+    color: #4d4d4d;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+// Resetpassword css
+.resetPassword {
+  .resetAlign {
+    align-items: center;
+  }
+  .loginFormSection {
+    .loginFormSec {
+      padding: 100px 50px !important;
+    }
+  }
+}
+@media (max-width: 769px) {
+  .logInPage {
+    padding: 30px 0;
+    .enterpriseSec {
+      .enterpriseHeading {
+        display: flex;
+        justify-content: center;
+        justify-content: center;
+        h1 {
+          font-size: 22px;
+        }
+      }
+    }
+    .deliveryImgSec {
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 130px;
+      }
+    }
+    .loginFormSection {
+      .loginFormSec {
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        padding: 25px 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
+        h2.welcomeHeading {
+          margin-bottom: 15px;
+          font-size: 20px;
+        }
+        h1.loginHeading {
+          font-size: 21px;
+          margin-bottom: 15px;
+        }
+        .inputFeilds {
+          .form-control {
+            padding: 5px 15px;
+          }
+          .loginBtnSec {
+            margin-top: 25px;
+            .loginBtn {
+              padding: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .forgotPage {
+    .loginFormSection {
+      .loginFormSec {
+        p {
+          margin-bottom: 35px;
+          font-size: 13px;
+        }
+        .inputFeilds {
+          .backToLoginBtn {
+            margin-top: 65px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .logInPage {
+    padding: 50px 0;
+    .loginFormSection {
+      .loginFormSec {
+        width: 100%;
+        padding: 30px;
+        h2.welcomeHeading {
+          font-size: 25px;
+          margin-bottom: 25px;
+        }
+        h1.loginHeading {
+          font-size: 25px;
+          margin-bottom: 25px;
+        }
+        .inputFeilds .numberFields input[type="text"] {
+          width: 50px;
+          height: 60px;
+          font-size: 30px;
+          padding: 10px 15px;
+        }
+      }
+    }
+
+    .deliveryImgSec {
+      display: flex;
+      justify-content: flex-start;
+      img {
+        width: 60%;
+      }
+    }
+  }
+}
+.resetPassword {
+  .loginFormSection {
+    .loginFormSec {
+      padding: 50px 25px !important;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .logInPage {
+    padding: 50px 0;
+
+    .deliveryImgSec {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+      }
+    }
+    .loginFormSection {
+      .loginFormSec {
+        width: 100%;
+        padding: 25px 35px;
+        h2.welcomeHeading {
+          margin-bottom: 23px;
+          font-size: 26px;
+        }
+        h1.loginHeading {
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .forgotPage {
+    .loginFormSection {
+      .loginFormSec {
+        .inputFeilds {
+          .backToLoginBtn {
+            margin-top: 90px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .logInPage {
+    padding: 30px 0;
+    .loginFormSection {
+      .loginFormSec {
+        padding: 40px 45px;
+        width: 450px;
+      }
+    }
+    .deliveryImgSec {
+      margin-top: 40px;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .otpPage {
+    padding: 60px 0;
+  }
+}
+@media (min-width: 1500px) and (max-width: 1599px) {
+  .logInPage {
+    padding: 50px 0;
+    .enterpriseSec {
+      .deliveryImgSec {
+        margin-top: 50px;
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+  .otpPage .loginFormSection .loginFormSec {
+    padding-bottom: 100px;
+  }
+  .resetPassword {
+    .loginFormSection {
+      .loginFormSec {
+        padding-bottom: 100px !important;
+      }
+    }
+  }
+}

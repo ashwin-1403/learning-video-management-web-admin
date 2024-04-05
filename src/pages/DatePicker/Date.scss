@@ -1,0 +1,28 @@
+.StartDate {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .startDateLabel {
+    color: #4d4d4d;
+    font-family: Poppins;
+    font-size: 16px;
+    margin-bottom: 7px;
+    font-weight: 500;
+  }
+  input {
+    padding: 7px;
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+  }
+  .calenderImg {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+  }
+  .react-datepicker-popper {
+    z-index: 10;
+  }
+}
